@@ -1,5 +1,5 @@
 const Campground = require("../models/items");
-const ExpressError = require("../utils/expressError");
+const ExpressError = require("../Utils/expressError");
 // const {} =require("../Utils/expressError.js")
 const mbxgeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const geocoder = mbxgeocoding({

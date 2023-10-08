@@ -3,7 +3,7 @@
 
 const User = require("../models/user.js");
 
-const ExpressError = require("../utils/expressError");
+const ExpressError = require("../Utils/expressError");
 
 module.exports.register = async (newUser) => {
   try {
