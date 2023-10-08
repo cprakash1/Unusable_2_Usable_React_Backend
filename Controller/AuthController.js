@@ -1,5 +1,5 @@
 const ExpressError = require("../Utils/expressError");
-const AuthServices = require("../services/AuthService.js");
+const AuthServices = require("../Services/AuthService.js");
 const jwt = require("../Utils/JwtLiberary.js");
 
 module.exports.login = async (req, res, next) => {
