@@ -1,4 +1,4 @@
-const ExpressError = require("../utils/expressError");
+const ExpressError = require("../Utils/expressError");
 const ItemReprository = require("../Reprository/ItemReprository.js");
 
 module.exports.getAllItems = async () => {

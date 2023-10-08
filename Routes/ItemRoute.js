@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const catchAsync = require("../utils/catchAsync");
+const catchAsync = require("../Utils/catchAsync");
 const ItemController = require("../Controller/ItemController");
 const { storage } = require("../Cloudinary/index.js");
 const multer = require("multer");

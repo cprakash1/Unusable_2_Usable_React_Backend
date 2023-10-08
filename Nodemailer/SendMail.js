@@ -1,6 +1,6 @@
 const nodeMailer = require("nodemailer");
 const { error } = require("console");
-const ExpressError = require("../utils/expressError");
+const ExpressError = require("../Utils/expressError");
 
 module.exports.SendMail = async (obj) => {
   // console.log(req.body);

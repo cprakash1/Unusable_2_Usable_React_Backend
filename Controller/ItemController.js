@@ -1,4 +1,4 @@
-const ExpressError = require("../utils/expressError");
+const ExpressError = require("../Utils/expressError");
 const ItemService = require("../Services/ItemService");
 
 module.exports.IndexPage = async (req, res, next) => {

@@ -1,4 +1,4 @@
-const ExpressError = require("../utils/expressError");
+const ExpressError = require("../Utils/expressError");
 const ReviewService = require("../Services/ReviewService");
 
 module.exports.createReview = async (req, res, next) => {

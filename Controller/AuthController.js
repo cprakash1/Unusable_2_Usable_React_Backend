@@ -1,4 +1,4 @@
-const ExpressError = require("../utils/expressError");
+const ExpressError = require("../Utils/expressError");
 const AuthServices = require("../services/AuthService.js");
 const jwt = require("../Utils/JwtLiberary.js");
 
