@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const AuthController = require("../Controller/AuthController");
-const catchAsync = require("../utils/catchAsync");
+const catchAsync = require("../Utils/catchAsync");
 
 router.post("/login", catchAsync(AuthController.login));
 
