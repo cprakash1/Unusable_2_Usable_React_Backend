@@ -1,6 +1,6 @@
 const Campground = require("../models/items");
 const Review = require("../models/buyers");
-const ExpressError = require("../utils/expressError");
+const ExpressError = require("../Utils/expressError");
 
 module.exports.createAReview = async (id, rev, user) => {
   try {
