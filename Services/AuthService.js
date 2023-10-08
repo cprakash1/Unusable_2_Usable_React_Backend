@@ -1,4 +1,4 @@
-const ExpressError = require("../Utils/expressError.js");
+const ExpressError = require("../utils/expressError");
 const AuthReprository = require("../Reprository/AuthReprository.js");
 const bcrypt = require("../Utils/bcrypt.js");
 const jwt = require("../Utils/JwtLiberary.js");
