@@ -8,20 +8,16 @@ const AuthRouter = require("./Routes/AuthRoute");
 const ItemRoute = require("./Routes/ItemRoute");
 const ReviewRoute = require("./Routes/ReviewRoute");
 const cors = require("cors");
+const connectDB = require("./Config/db");
+const { configureSocket } = require("./Config/socket");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 const PORT = process.env.PORT || 80;
-const MONGODB_URI = process.env.MONGODB_URI;
-mongoose
-  .connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB Connected..."))
-  .catch((err) => console.log(err));
+
+connectDB();
 
 app.use((req, res, next) => {
   console.log(req.url, req.method);
@@ -45,6 +41,8 @@ app.use((err, req, res, next) => {
   res.status(statusCode).json({ error: message, success: false });
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
+const io = configureSocket(server);
