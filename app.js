@@ -10,6 +10,7 @@ const ReviewRoute = require("./Routes/ReviewRoute");
 const cors = require("cors");
 const connectDB = require("./Config/db");
 const { configureSocket } = require("./Config/socket");
+const ChatRoute = require("./Routes/ChatRoute");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -30,6 +31,7 @@ app.use((req, res, next) => {
 app.use("/", AuthRouter);
 app.use("/items", ItemRoute);
 app.use("/items/:id/reviews", ReviewRoute);
+app.use("/items/:id/chats", ChatRoute);
 // app.post("/upload", async (req, res) => {
 //   // const image = req.files.map((f) => ({ url: f.path, filename: f.filename }));
 //   console.log(req.body.name, req.files);

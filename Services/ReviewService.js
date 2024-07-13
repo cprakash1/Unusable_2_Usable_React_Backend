@@ -2,12 +2,12 @@ const ReviewReprository = require("../Reprository/ReviewReprository");
 const ExpressError = require("../Utils/expressError");
 
 module.exports.createAReview = async (id, obj) => {
-  if (!obj || !obj.user || !obj.body || !obj.cost || !id) {
+  if (!obj || !obj.user || !obj.body || !id) {
     throw new ExpressError("Please provide all details", 500);
   }
   try {
-    const { user, body, cost } = obj;
-    const review = { cost, body };
+    const { user, body } = obj;
+    const review = { body };
     return await ReviewReprository.createAReview(id, review, user);
   } catch (err) {
     throw new ExpressError("Error in Review Service" + err, 500);
