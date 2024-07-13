@@ -31,6 +31,7 @@ class ChatController {
   }
   async getAllChat(req, res) {
     try {
+      console.log(req.body);
       const { user } = req.body;
       const campground = req.params.id;
       const response = await ChatService.getAllChat(campground, user);
