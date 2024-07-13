@@ -50,7 +50,6 @@ class ChatService {
   }
   async getAllChat(campId, receiver) {
     try {
-      console.log(campId, receiver);
       if (!campId || !receiver) {
         throw new Error("Please provide all details");
       }
