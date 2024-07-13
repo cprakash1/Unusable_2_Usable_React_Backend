@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
   body: String,
-  cost: Number,
   author: {
     type: Schema.Types.ObjectId,
     ref: "User",
