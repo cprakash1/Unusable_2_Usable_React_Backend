@@ -9,7 +9,11 @@ class ChatController {
       if (response.success) {
         res.status(201).json(response.chat);
       } else {
+<<<<<<< HEAD
         res.status(400).json({ message: response.message, success: false });
+=======
+        res.status(400).json({ message: response.message });
+>>>>>>> 1b8374ba50070f192f1c256021be3684025fc9f0
       }
     } catch (error) {
       throw new Error("Error in Chat Controller:" + error);
